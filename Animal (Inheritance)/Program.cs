@@ -10,8 +10,12 @@ namespace Animal__Inheritance_
             Dog dog = new Dog("Lesie ", 30);
             Turtle turtle = new Turtle("niki ");
 
+
+            //pitanje za razmisljanje. Da li kornjaca moze da slavi rodjendan?
             cat.CelebrateBirthday();
             dog.CelebrateBirthday();
+
+            
             
             Console.WriteLine(cat.ToString());
             Console.ReadLine();
