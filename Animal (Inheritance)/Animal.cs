@@ -19,22 +19,29 @@ namespace Animal__Inheritance_
             this.name = name;
 
             //cemu sluzi ova provera? sta se desi ako stavis da zivotinja ima nula godina. Testiraj!!!
+            //done
+
             if (age == 0)
-                age = 1;
+            { 
+                    this.age = age +1;
+            }
             else
-            this.age = age;
+                this.age = age;
         }
-        public void CelebrateBirthday()
+        public virtual void CelebrateBirthday()
         {
             if (age < 100)
                 age++;
         }
 
         //ToString je metoda koja se nasledjuje iz Object klase, treba da koristis override
-        public virtual string ToString()
+        //done
+
+        public override string ToString()
         {
             //jel ove zagrade treba da se ispisu na konzoli? Proveri da li se ispisuju i koji se format trazi
-            return name + ( age + " year ");
+            //done
+            return name + " ( "+ age + " year )";
         }
     }
 
@@ -44,18 +51,22 @@ namespace Animal__Inheritance_
         {
             //ovo se vec desava u konstruktoru parent klase. Proveri sta ce se desiti ako ovo izbacis
             //stavi breakpoint i na konstuktor parent klase i ovde pa kreiraj macku bez godina i vidi sta se desava pa zakljuci da li ti treba
-            age = 1;
+            //done
+
         }
         public Cat(string name,int age) : base(name,age)
         {
-
+            this.name = name;
+            this.age = base.age;
         }
 
         //Obzirom da se ova metoda sa istim nazivom i parametrima koristi u parent klasi treba da radis override
-        public void CelebrateBirthday()
+        //done
+
+        public override void CelebrateBirthday() 
         {
-            if (age < 25)
-                age++;
+            if(age<25)
+            base.CelebrateBirthday();
         }
         public override string ToString()
         {
@@ -70,18 +81,22 @@ namespace Animal__Inheritance_
         {
             //ovo se vec desava u konstruktoru parent klase. Proveri sta ce se desiti ako ovo izbacis
             //stavi breakpoint i na konstuktor parent klase i ovde pa kreiraj psa bez godina i vidi sta se desava pa zakljuci da li ti treba
-            age = 1;
+            //done
+
         }
         public Dog(string name, int age) : base(name, age)
         {
-
+            this.name = name;
+            this.age = base.age;
         }
 
         //Obzirom da se ova metoda sa istim nazivom i parametrima koristi u parent klasi treba da radis override
-        public void CelebrateBirthday()
+        //done
+
+        public override void CelebrateBirthday()
         {
             if (age < 20)
-                age++;
+                base.CelebrateBirthday();
         }
         public override string ToString()
         {
@@ -96,11 +111,13 @@ namespace Animal__Inheritance_
         {
             //ovo se vec desava u konstruktoru parent klase. Proveri sta ce se desiti ako ovo izbacis
             //stavi breakpoint i na konstuktor parent klase i ovde pa kreiraj psa bez godina i vidi sta se desava pa zakljuci da li ti treba
-            age = 1;
+            //done
+            
         }
         public Turtle(string name, int age) : base(name, age)
         {
-
+            this.name = name;
+            this.age = base.age;
         }
         public override string ToString()
         {
